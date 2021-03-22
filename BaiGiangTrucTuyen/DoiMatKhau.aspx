@@ -1,6 +1,4 @@
-﻿<%@ Page Language="C#" AutoEventWireup="true" CodeBehind="Dangnhap.aspx.cs" Inherits="BaiGiangTrucTuyen.Login" %>
-<!DOCTYPE html>
-
+﻿<%@ Page Language="C#" AutoEventWireup="true" CodeBehind="DoiMatKhau.aspx.cs" Inherits="BaiGiangTrucTuyen.DoiMatKhau" %>
 <html xmlns="http://www.w3.org/1999/xhtml">
 <head>
     <title>Login</title>
@@ -18,7 +16,7 @@
     <link rel="stylesheet" href="assets/css/fontawesome.css">
     <link rel="stylesheet" href="assets/css/tooplate-main.css">
     <link rel="stylesheet" href="assets/css/owl.css">
-    <link rel="stylesheet" href="assets/css/LoginForm.css" />
+    <link rel="stylesheet" href="assets/css/ChangePass.css"  />
 </head>
 <body>
     <form  runat="server">
@@ -31,20 +29,26 @@
                         <div class="col-md-12">
                             <div class="caption">
                                 <form action="/" id="form1" method="post">
-                                    <h2>Đăng Nhập Hệ Thống</h2>
+                                    <h2>Đổi mật khẩu</h2>
                                     <div>
                                         <div>
                                              <a class="navbar-brand" href="#"><img id="logo2" src="assets/images/logo2.png" alt=""></a>
                                         </div>
-                                        <span>UserName</span><asp:TextBox ID="txtUsername" runat="server" CssClass="textbox"></asp:TextBox>
-                                        <asp:RequiredFieldValidator ID="username" runat="server" ErrorMessage="The name does not allow null" Display="Dynamic" ControlToValidate="txtUsername" ForeColor="Red" SetFocusOnError="true"></asp:RequiredFieldValidator>
+                                        <span>Nhập mật khẩu cũ</span><asp:TextBox ID="txtOldPass" runat="server" CssClass="textbox" TextMode="Password"></asp:TextBox>
+                                    <%--    <asp:RequiredFieldValidator ID="RequiredFieldValidator1" runat="server" ErrorMessage="The password does not allow null" Display="Dynamic" ControlToValidate="txtPassWord" ForeColor="Red" SetFocusOnError="true"></asp:RequiredFieldValidator>--%>
                                     </div>
                                     <div>
-                                        <span>PassWord</span><asp:TextBox ID="txtPassWord" runat="server" CssClass="textbox" TextMode="Password"></asp:TextBox>
-                                        <asp:RequiredFieldValidator ID="password" runat="server" ErrorMessage="The password does not allow null" Display="Dynamic" ControlToValidate="txtPassWord" ForeColor="Red" SetFocusOnError="true"></asp:RequiredFieldValidator>
+                                        <span>Nhập mật khẩu mới</span><asp:TextBox ID="txtNewPassWord" runat="server" CssClass="textbox" TextMode="Password"></asp:TextBox>
+                             <%--           <asp:RequiredFieldValidator ID="NewPassWord" runat="server" ErrorMessage="Mật khẩu không được để trống" Display="Dynamic" ControlToValidate="txtPassWord" ForeColor="Red" SetFocusOnError="true"></asp:RequiredFieldValidator>--%>
                                     </div>
-                                    <asp:ValidationSummary ID="ValidationSummary1" runat="server" ShowMessageBox="true" ShowSummary="false" />
-                                    <asp:Button ID="btnSubmit" runat="server" Text="Đăng nhập" CssClass="btn btn-success" OnClick="btnSubmit_Click" />
+                                     <div>
+                                        <span>Xác nhận mật khẩu mới</span><asp:TextBox ID="txtComfirmPass" runat="server" CssClass="textbox" TextMode="Password"></asp:TextBox>
+                                        <%--<asp:RequiredFieldValidator ID="ComfirmPass" runat="server" ErrorMessage="Mật khẩu không được để trống" Display="Dynamic" ControlToValidate="txtComfirmPass" ForeColor="Red" SetFocusOnError="true"></asp:RequiredFieldValidator>--%>
+                                         <asp:CompareValidator ID="CompareValidator1" runat="server" ControlToCompare="txtNewPassWord" ControlToValidate="txtComfirmPass" ForeColor="Red" Operator="Equal"  ErrorMessage="Mật khẩu xác nhận không chính xác"></asp:CompareValidator>
+                                    </div>
+                                    <asp:ValidationSummary ID="ValidationSummary2" runat="server" ShowMessageBox="true" ShowSummary="false" />
+                                    <asp:Button ID="btnChangepass" runat="server" Text="Đổi mật khẩu " CssClass="btn btn-success" OnClick="btnChangepass_Click"  />
+                                    <asp:Label Text="ABCKJJKJ" id="lbThongBao" runat="server" />
                                 </form>
                             </div>
                         </div>

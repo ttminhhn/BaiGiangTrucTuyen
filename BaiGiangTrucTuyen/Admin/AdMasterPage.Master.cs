@@ -11,7 +11,10 @@ namespace BaiGiangTrucTuyen.Admin
     {
         protected void Page_Load(object sender, EventArgs e)
         {
-
+            if (Session["QuanTri"] == null)
+            {
+                Response.Redirect("../Dangnhap.aspx");
+            }
         }
     }
 }

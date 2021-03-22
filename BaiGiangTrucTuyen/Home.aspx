@@ -21,6 +21,7 @@
             <div class="right-content">
               <h6>Họ và tên: Trần Thanh Minh</h6>
               <h6>Lớp hành chính:18A100A04</h6>
+                <h6><a href="DoiMatKhau.aspx">Đổi mật khẩu</a></h6>
             </div>
           </div>
         </div>

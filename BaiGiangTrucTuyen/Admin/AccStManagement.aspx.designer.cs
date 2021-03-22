@@ -11,17 +11,17 @@ namespace BaiGiangTrucTuyen.Admin
 {
 
 
-    public partial class Coursemanagement
+    public partial class AccManagement
     {
 
         /// <summary>
-        /// LitTea control.
+        /// LitST control.
         /// </summary>
         /// <remarks>
         /// Auto-generated field.
         /// To modify move field declaration from designer file to code-behind file.
         /// </remarks>
-        protected global::System.Web.UI.WebControls.Literal LitTea;
+        protected global::System.Web.UI.WebControls.Literal LitST;
 
         /// <summary>
         /// BtnThem control.

@@ -105,16 +105,26 @@
     </Reference>
   </ItemGroup>
   <ItemGroup>
-    <Content Include="Admin\AccManagement.aspx" />
+    <Content Include="Admin\AccStManagement.aspx" />
+    <Content Include="Admin\AccTeaManagement.aspx" />
     <Content Include="Admin\Coursemanagement.aspx" />
     <Content Include="Admin\css\sb-admin-2.css" />
     <Content Include="Admin\css\sb-admin-2.min.css" />
+    <Content Include="Admin\DelAccGV.aspx" />
+    <Content Include="Admin\DelAccSV.aspx" />
+    <Content Include="Admin\Del_Mon.aspx" />
+    <Content Include="Admin\EditAccSt.aspx" />
+    <Content Include="Admin\EditAccTea.aspx" />
+    <Content Include="Admin\EditMonHoc.aspx" />
     <Content Include="Admin\img\undraw_posting_photo.svg" />
     <Content Include="Admin\img\undraw_profile.svg" />
     <Content Include="Admin\img\undraw_profile_1.svg" />
     <Content Include="Admin\img\undraw_profile_2.svg" />
     <Content Include="Admin\img\undraw_profile_3.svg" />
     <Content Include="Admin\img\undraw_rocket.svg" />
+    <Content Include="Admin\InsertCourse.aspx" />
+    <Content Include="Admin\InsertST.aspx" />
+    <Content Include="Admin\InsertTea.aspx" />
     <Content Include="Admin\js\demo\chart-area-demo.js" />
     <Content Include="Admin\js\demo\chart-bar-demo.js" />
     <Content Include="Admin\js\demo\chart-pie-demo.js" />
@@ -1793,6 +1803,7 @@
     <Content Include="assets\css\flex-slider.css" />
     <Content Include="assets\css\fontawesome.css" />
     <Content Include="assets\css\Home.css" />
+    <Content Include="assets\css\ChangePass.css" />
     <Content Include="assets\css\LoginForm.css" />
     <Content Include="assets\css\owl.css" />
     <Content Include="assets\css\MasterPage.css" />
@@ -1835,6 +1846,7 @@
     <Content Include="Content\Site.css" />
     <Content Include="CourseDetail.aspx" />
     <Content Include="Courses.aspx" />
+    <Content Include="DoiMatKhau.aspx" />
     <Content Include="favicon.ico" />
     <Content Include="fonts\glyphicons-halflings-regular.svg" />
     <Content Include="Global.asax" />
@@ -3785,12 +3797,19 @@
     <Content Include="vendor\jquery\jquery.slim.min.map" />
   </ItemGroup>
   <ItemGroup>
-    <Compile Include="Admin\AccManagement.aspx.cs">
-      <DependentUpon>AccManagement.aspx</DependentUpon>
+    <Compile Include="Admin\AccStManagement.aspx.cs">
+      <DependentUpon>AccStManagement.aspx</DependentUpon>
       <SubType>ASPXCodeBehind</SubType>
     </Compile>
-    <Compile Include="Admin\AccManagement.aspx.designer.cs">
-      <DependentUpon>AccManagement.aspx</DependentUpon>
+    <Compile Include="Admin\AccStManagement.aspx.designer.cs">
+      <DependentUpon>AccStManagement.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="Admin\AccTeaManagement.aspx.cs">
+      <DependentUpon>AccTeaManagement.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="Admin\AccTeaManagement.aspx.designer.cs">
+      <DependentUpon>AccTeaManagement.aspx</DependentUpon>
     </Compile>
     <Compile Include="Admin\AdMasterPage.Master.cs">
       <DependentUpon>AdMasterPage.Master</DependentUpon>
@@ -3806,6 +3825,72 @@
     <Compile Include="Admin\Coursemanagement.aspx.designer.cs">
       <DependentUpon>Coursemanagement.aspx</DependentUpon>
     </Compile>
+    <Compile Include="Admin\DelAccGV.aspx.cs">
+      <DependentUpon>DelAccGV.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="Admin\DelAccGV.aspx.designer.cs">
+      <DependentUpon>DelAccGV.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="Admin\DelAccSV.aspx.cs">
+      <DependentUpon>DelAccSV.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="Admin\DelAccSV.aspx.designer.cs">
+      <DependentUpon>DelAccSV.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="Admin\Del_Mon.aspx.cs">
+      <DependentUpon>Del_Mon.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="Admin\Del_Mon.aspx.designer.cs">
+      <DependentUpon>Del_Mon.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="Admin\EditAccSt.aspx.cs">
+      <DependentUpon>EditAccSt.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="Admin\EditAccSt.aspx.designer.cs">
+      <DependentUpon>EditAccSt.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="Admin\EditAccTea.aspx.cs">
+      <DependentUpon>EditAccTea.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="Admin\EditAccTea.aspx.designer.cs">
+      <DependentUpon>EditAccTea.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="Admin\EditMonHoc.aspx.cs">
+      <DependentUpon>EditMonHoc.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="Admin\EditMonHoc.aspx.designer.cs">
+      <DependentUpon>EditMonHoc.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="Admin\InsertCourse.aspx.cs">
+      <DependentUpon>InsertCourse.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="Admin\InsertCourse.aspx.designer.cs">
+      <DependentUpon>InsertCourse.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="Admin\InsertST.aspx.cs">
+      <DependentUpon>InsertST.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="Admin\InsertST.aspx.designer.cs">
+      <DependentUpon>InsertST.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="Admin\InsertTea.aspx.cs">
+      <DependentUpon>InsertTea.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="Admin\InsertTea.aspx.designer.cs">
+      <DependentUpon>InsertTea.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="AppCode\Database\Giangvien.cs" />
+    <Compile Include="AppCode\Database\MonHoc.cs" />
+    <Compile Include="AppCode\Database\SinhVien.cs" />
     <Compile Include="AppCode\Database\SQLDatabase.cs" />
     <Compile Include="AppCode\Database\Taikhoan.cs" />
     <Compile Include="CourseDetail.aspx.cs">
@@ -3821,6 +3906,13 @@
     </Compile>
     <Compile Include="Courses.aspx.designer.cs">
       <DependentUpon>Courses.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="DoiMatKhau.aspx.cs">
+      <DependentUpon>DoiMatKhau.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="DoiMatKhau.aspx.designer.cs">
+      <DependentUpon>DoiMatKhau.aspx</DependentUpon>
     </Compile>
     <Compile Include="Global.asax.cs">
       <DependentUpon>Global.asax</DependentUpon>

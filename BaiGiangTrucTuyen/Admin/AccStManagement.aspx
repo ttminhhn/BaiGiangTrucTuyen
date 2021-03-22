@@ -1,6 +1,7 @@
-﻿<%@ Page Title="" Language="C#" MasterPageFile="~/Admin/AdMasterPage.Master" AutoEventWireup="true" CodeBehind="UnitManagement.aspx.cs" Inherits="BaiGiangTrucTuyen.Teacher.UnitManagement" %>
+﻿<%@ Page Title="" Language="C#" MasterPageFile="~/Admin/AdMasterPage.Master" AutoEventWireup="true" CodeBehind="AccStManagement.aspx.cs" Inherits="BaiGiangTrucTuyen.Admin.AccManagement" %>
 <asp:Content ID="Content1" ContentPlaceHolderID="ContentPlaceHolder1" runat="server">
-     <div class="container-fluid">
+         <div class="container-fluid">
+
                     <!-- DataTales Example -->
                     <div class="card shadow mb-4">
                         <div class="card-header py-3">
@@ -24,9 +25,10 @@
                                         <asp:Literal ID="LitST" runat="server"></asp:Literal>      
                                     </tbody>
                                 </table>         
-                               <asp:Button ID="BtnThem" runat="server" CssClass="btn btn-danger" Text="Thêm Bài Giảng" />
+                               <asp:Button ID="BtnThem" runat="server" CssClass="btn btn-danger" Text="Thêm Học Sinh" OnClick="BtnThem_Click" />
                             </div>
                         </div>
                     </div>
+
                 </div>
 </asp:Content>

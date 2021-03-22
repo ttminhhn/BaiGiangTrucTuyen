@@ -8,17 +8,16 @@ using System.Web.UI.WebControls;
 
 namespace BaiGiangTrucTuyen.Admin
 {
-    public partial class Coursemanagement : System.Web.UI.Page
+    public partial class AccTeaManagement : System.Web.UI.Page
     {
         protected void Page_Load(object sender, EventArgs e)
         {
-
-            if (!IsPostBack)
+            if(!IsPostBack)
             {
-                LoadKH();
-            }
+                LoadGV();
+            }    
         }
-        private void LoadKH()
+        private void LoadGV()
         {
             DataTable data = AppCode.Database.Giangvien.LoadTea();
             if (data.Rows.Count > 0)
@@ -27,20 +26,22 @@ namespace BaiGiangTrucTuyen.Admin
                 {
                     LitTea.Text += @"
                                     	<tr>
-                                            <td>" + data.Rows[i]["iMaMon"] + @"</td>
-                                            <td>" + data.Rows[i]["sTenMon"] + @"</td>
-                                            <td>" + data.Rows[i]["iSoTC"] + @" </td>
-                                            <td> <a href=EditAccTea.aspx?MaMH=" + data.Rows[i]["iMaMon"] + @" class= 'btn btn-success'>Sửa</a>
-                                                 <a href='DelAccGV.aspx?MaMH=" + data.Rows[i]["iMaMon"] + @"' class= 'btn btn-danger'>Xóa</a>
+                                            <td>" + data.Rows[i]["sMaGV"] + @"</td>
+                                            <td>" + data.Rows[i]["sTenGV"] + @"</td>
+                                            <td>" + data.Rows[i]["sSDT"] + @" </td>
+                                            <td>" + data.Rows[i]["sEmail"] + @"</td>
+                                            <td> <a href=EditAccTea.aspx?MaGV=" + data.Rows[i]["sMaGV"] + @" class= 'btn btn-success'>Sửa</a>
+                                                 <a href='DelAccGV.aspx?MaGV=" + data.Rows[i]["sMaGV"] + @"' class= 'btn btn-danger'>Xóa</a>
                                             </td>
                                          </ tr >
                                    ";
                 }
             }
         }
+
         protected void BtnThem_Click(object sender, EventArgs e)
         {
-            Response.Redirect("InsertCourse.aspx");
+            Response.Redirect("InsertTea.aspx");
         }
     }
 }

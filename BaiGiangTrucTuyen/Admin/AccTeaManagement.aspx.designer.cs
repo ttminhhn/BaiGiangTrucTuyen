@@ -11,7 +11,7 @@ namespace BaiGiangTrucTuyen.Admin
 {
 
 
-    public partial class Coursemanagement
+    public partial class AccTeaManagement
     {
 
         /// <summary>

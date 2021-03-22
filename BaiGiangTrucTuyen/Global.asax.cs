@@ -15,6 +15,11 @@ namespace BaiGiangTrucTuyen
         void Application_Start(object sender, EventArgs e)
         {
             AppCode.Database.SQLDatabase.ConnectionString = ConfigurationManager.AppSettings["ConnectionString"];
+
+        }
+        protected void Session_Start(object sender, EventArgs e)
+        {
+            Session["admin"] = null;
         }
     }
 }
